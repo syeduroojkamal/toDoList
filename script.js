@@ -1,7 +1,6 @@
 function addItem() {
   const item = document.createElement("div");
   item.className = "item";
-  item.id = "item";
   const boxText = document.querySelector("#addItemText").value;
   if (boxText === "") {
     alert("write a name for your item in the box above");
