@@ -24,3 +24,12 @@ function clearAll() {
 
 const clearAllButton = document.querySelector("#clearAll");
 clearAllButton.addEventListener("click", () => clearAll());
+
+function removeItem(e) {
+  if (e.target.className === "item") {
+    e.target.remove();
+  }
+}
+
+const allItems = document.querySelector("#items");
+allItems.addEventListener("click", removeItem);
