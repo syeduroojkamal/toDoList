@@ -30,8 +30,8 @@ const clearAllButton = document.querySelector("#clearAll");
 clearAllButton.addEventListener("click", () => clearAll());
 
 function removeItem(e) {
-  if (e.target.className === "item") {
-    e.target.remove();
+  if (e.target.classList.contains("fa-xmark")) {
+    e.target.parentElement.remove();
   }
 }
 
