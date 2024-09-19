@@ -9,6 +9,10 @@ function addItem() {
   const name = document.createTextNode(boxText);
   item.appendChild(name);
 
+  const xmark = document.createElement("i");
+  xmark.classList = "fa-solid fa-xmark";
+  item.appendChild(xmark);
+
   document.querySelector("#items").appendChild(item);
 
   document.querySelector("#addItemText").value = "";
