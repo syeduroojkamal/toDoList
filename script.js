@@ -37,3 +37,18 @@ function removeItem(e) {
 
 const allItems = document.querySelector("#items");
 allItems.addEventListener("click", removeItem);
+
+function filterFn(e) {
+  const text = e.target.value.toLowerCase();
+  const items = document.querySelectorAll(".item");
+  items.forEach((item) => {
+    if (item.firstChild.textContent.toLowerCase().indexOf(text)) {
+      item.style.display = "none";
+    } else {
+      item.style.display = "flex";
+    }
+  });
+}
+
+const filterItem = document.querySelector("#filterItem");
+filterItem.addEventListener("input", filterFn);
