@@ -33,7 +33,7 @@ body {
 }
 
 .title {
-  font-size: 10vw;
+  font-size: min(3.5rem, 10vw);
 }
 
 .title > img {
